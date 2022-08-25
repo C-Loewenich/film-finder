@@ -1,0 +1,121 @@
+@import "./constants";
+
+body {
+  display: grid;
+  grid-template-rows: auto 100% auto;
+  background-color: $background;
+  header {
+    grid-row: 1;
+    box-shadow: $shadow-containers;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(59, 59, 59, 0.87);
+    h1 {
+      color: $text-color;
+      text-align: center;
+      margin: 25px;
+      font-size: 3.5rem;
+      letter-spacing: 3px;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman",
+        serif "Arial Narrow Bold", sans-serif, "Times New Roman", Times, serif,
+        Cochin, Georgia, Times, "Times New Roman", serif;
+    }
+    #filter-checkboxes {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin-bottom: 15px;
+      #year-filter {
+        label {
+          flex-wrap: wrap;
+          margin-right: 25px;
+        }
+      }
+      #movie-filter {
+        display: flex;
+        justify-items: center;
+        flex-wrap: wrap;
+      }
+      label {
+        color: white;
+      }
+    }
+  }
+  main {
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 150px;
+    padding: 10px 10px 30px 10px;
+    height: 100%;
+    a {
+      margin: 10px;
+      color: white;
+      border-radius: 7px;
+      box-shadow: $shadow-movies;
+      height: 500px;
+      width: 280px;
+
+      h3 {
+        padding: 7px;
+        //max-width: 250px;
+      }
+      p {
+        padding: 7px;
+      }
+      img {
+        border-radius: 7px;
+        width: 100%;
+        max-height: 400px;
+      }
+    }
+  }
+  footer {
+    grid-row: 3;
+    background-color: $background;
+    color: white;
+    text-align: center;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    box-shadow: $shadow-containers;
+    p {
+      margin: 10px;
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 720px) {
+  body {
+    header {
+      h1 {
+        font-size: 2.7rem;
+      }
+      #filter-checkboxes {
+        flex-direction: column;
+
+        #movie-filter {
+        }
+      }
+    }
+    main {
+      a {
+        width: 180px;
+        height: 370px;
+      }
+    }
+  }
+}
+@media (max-width: 540px) {
+  body {
+    header {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}

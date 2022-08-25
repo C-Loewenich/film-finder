@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Casper's movie finder</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script defer type="text/javascript" src="movies.js"></script>
+    <script defer type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Casper's Movie Finder</h1>
+        <ul id="filter-checkboxes">
+          <div id="year-filter">
+            <li>
+              <input
+                type="checkbox"
+                id="filterYear"
+                name="filterYear"
+                value="Movies after 2014"
+              />
+              <label for="filterYear">Movies produced after 2014</label>
+            </li>
+          </div>
+          <div id="movie-filter">
+            <li>
+              <input type="checkbox" id="all" name="filterHero" value="All" />
+              <label for="All">All Movies</label>
+            </li>
+            <li>
+              <input
+                class="filter"
+                type="checkbox"
+                id="avenger"
+                name="filterHero"
+                value="Avenger"
+              />
+              <label for="Avenger">Avenger</label>
+            </li>
+            <li>
+              <input
+                class="filter"
+                type="checkbox"
+                id="x-men"
+                name="filterHero"
+                value="X-Men"
+              />
+              <label for="X-Men">X-Men</label>
+            </li>
+            <li>
+              <input
+                class="filter"
+                type="checkbox"
+                id="princess"
+                name="filterHero"
+                value="Princess"
+              />
+              <label for="Princess">Princess</label>
+            </li>
+            <li>
+              <input
+                class="filter"
+                type="checkbox"
+                id="batman"
+                name="filterHero"
+                value="Batman"
+              />
+              <label for="Batman">Batman</label>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <main id="movieContainer"></main>
+    <footer>
+      <p>No right reserved for Caspers Movie finder</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 100% auto;
+  background-color: rgb(59, 59, 59);
+}
+body header {
+  grid-row: 1;
+  box-shadow: 0 0 50px 0px rgba(95, 95, 95, 0.979);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(59, 59, 59, 0.87);
+}
+body header h1 {
+  color: rgb(137, 137, 255);
+  text-align: center;
+  margin: 25px;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif "Arial Narrow Bold", sans-serif, "Times New Roman", Times, serif, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+body header #filter-checkboxes {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 15px;
+}
+body header #filter-checkboxes #year-filter label {
+  flex-wrap: wrap;
+  margin-right: 25px;
+}
+body header #filter-checkboxes #movie-filter {
+  display: flex;
+  justify-items: center;
+  flex-wrap: wrap;
+}
+body header #filter-checkboxes label {
+  color: white;
+}
+body main {
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 150px;
+  padding: 10px 10px 30px 10px;
+  height: 100%;
+}
+body main a {
+  margin: 10px;
+  color: white;
+  border-radius: 7px;
+  box-shadow: 0 0 50px 0px rgba(137, 255, 206, 0.979);
+  height: 500px;
+  width: 280px;
+}
+body main a h3 {
+  padding: 7px;
+}
+body main a p {
+  padding: 7px;
+}
+body main a img {
+  border-radius: 7px;
+  width: 100%;
+  max-height: 400px;
+}
+body footer {
+  grid-row: 3;
+  background-color: rgb(59, 59, 59);
+  color: white;
+  text-align: center;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 0 50px 0px rgba(95, 95, 95, 0.979);
+}
+body footer p {
+  margin: 10px;
+}
+
+@media (max-width: 720px) {
+  body header h1 {
+    font-size: 2.7rem;
+  }
+  body header #filter-checkboxes {
+    flex-direction: column;
+  }
+  body main a {
+    width: 180px;
+    height: 370px;
+  }
+}
+@media (max-width: 540px) {
+  body header h1 {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
